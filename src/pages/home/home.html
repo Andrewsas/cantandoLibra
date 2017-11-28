@@ -8,15 +8,14 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-card>
-        <img src="https://www.espacocantar.com.br/wp-content/uploads/2017/07/crianc3a7a-cantando-aquec3a7endo.jpg"/>
+    <ion-card (click)="openModal(post)">
+        <img [src]="post.img"/>
         <ion-card-content>
           <ion-card-title>
-            Nine Inch Nails Live
+            {{post.title}}
             </ion-card-title>
           <p>
-            The most popular industrial group ever, and largely
-            responsible for bringing the music to a mass audience.
+            {{post.descricao}}
           </p>
         </ion-card-content>
         <ion-row>
