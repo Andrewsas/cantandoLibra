@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 
-import { ModalInfPage } from "../modal-inf/modal-inf";
 
 @Component({
   selector: 'page-home',
@@ -9,22 +8,36 @@ import { ModalInfPage } from "../modal-inf/modal-inf";
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {}
 
-  }
-
-  public post: any = 
+  public posts: any = [
     {
-      title: "50 Reais",
-      descricao: "",
-      video: "https://www.youtube.com/embed/5Y3N2Q81Dzc?list=RDVt-krQqhxbk",
-      img: "https://i.ytimg.com/vi/_b-FdGeNcYo/maxresdefault.jpg",
-      letra: "<div><span>Bonito!</span><br><span>Que bonito hein!</span><br><span>Que cena mais linda</span><br><span>Será que eu estou atrapalhando o casalzinho aí</span></div><div><span>Que lixo!</span><br><span>'Cê 'tá de brincadeira</span><br><span>Então é aqui o seu futebol toda Quarta-feira</span></div><div><span>E por acaso esse motel</span><br><span>É o mesmo que me trouxe na lua de mel</span><br><span>É o mesmo que você me prometeu o céu</span><br><span>E agora me tirou o chão</span></div><div><span>E não precisa se vestir</span><br><span>Eu já vi tudo que eu tinha que ver aqui</span><br><span>Que decepção</span><br><span>Um a zero pra minha intuição</span></div><div><span>Não sei se dou na cara dela ou bato em você</span><br><span>Mas eu não vim atrapalhar sua noite de prazer</span><br><span>E pra ajudar pagar a dama que lhe satisfaz</span><br><span>Toma aqui uns 50 reais</span></div><div><span>Não sei se dou na cara dela ou bato em você</span><br><span>Mas eu não vim atrapalhar sua noite de prazer</span><br><span>E pra ajudar pagar a dama que lhe satisfaz</span><br><span>Toma aqui uns 50 reais</span></div><div><span>E por acaso esse motel</span><br><span>É o mesmo que me trouxe na lua de mel</span><br><span>É o mesmo que você me prometeu o céu</span><br><span>E agora me tirou o chão</span></div><div><span>E não precisa se vestir</span><br><span>Eu já vi tudo que eu tinha que ver aqui</span><br><span>Que decepção</span><br><span>Um a zero pra minha intuição</span></div><div><span>Não sei se dou na cara dela ou bato em você</span><br><span>Mas eu não vim atrapalhar sua noite de prazer</span><br><span>E pra ajudar pagar a dama que lhe satisfaz</span><br><span>Toma aqui uns 50 reais</span></div><div><span>Não sei se dou na cara dela ou bato em você</span><br><span>Mas eu não vim atrapalhar sua noite de prazer</span><br><span>E pra ajudar pagar a dama que lhe satisfaz</span><br><span>Toma aqui uns 50 reais</span></div><div><span>E pra ajudar pagar a dama que lhe satisfaz</span><br><span>Toma aqui uns 50 reais</span></div>"
+      title: "Avião",
+      descricao: "Um avião ou aeroplano é qualquer aeronave que necessita de asas fixas e motores para se sustentar no ar. Pode possuir um ou mais planos de asa, sendo estas fixas em relação ao corpo da aeronave, ou seja, que dependem do movimento do veículo como um todo para gerar sustentação aérea.",
+      video: "",
+      img: "./assets/imgs/transportes/aviao.JPG",
+      letra: ""
+    },
+    {
+      title: "Coco",
+      descricao: "O coqueiro, é um membro da família Arecaceae. É a única espécie classificada no gênero Cocos.",
+      video: "",
+      img: "./assets/imgs/frutas/coco.jpg",
+      letra: ""
+    },
+    {
+      title: "Coruja",
+      descricao: "O termo coruja é a designação comum das aves estrigiformes, das famílias dos titonídeos e estrigídeos. Na região do Amazonas, algumas espécies também são chamadas de murutucu.",
+      video: "",
+      img: "./assets/imgs/animais/coruja.jpg",
+      letra: ""
+    },
+    {
+      title: "Carne",
+      descricao: "Dá-se o nome de carne ou vianda ao tecido muscular dos animais, inclusive do homem. Algumas vezes, o termo se refere apenas à carne de mamíferos, ou de mamíferos e aves.",
+      video: "",
+      img: "./assets/imgs/alimentos/carne.jpg",
+      letra: ""
     }
-
-  public openModal(post){
-    console.log('abriu modal', post);
-    let myModal = this.modalCtrl.create(ModalInfPage, post);
-    myModal.present();
-  }
+  ] 
 }
